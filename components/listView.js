@@ -1,6 +1,10 @@
-const ListView = () => (
+import ListCard from './listCard'
+
+const ListView = props => (
   <div>
-    ListView here
+    {props.items.map(item => {
+      return <ListCard item={item} key={item.id} />
+    })}
   </div>
 )
 
