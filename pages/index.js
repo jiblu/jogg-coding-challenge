@@ -5,8 +5,10 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      isGrid: true,
       items: []
     }
+    this.changeView = this.changeView.bind(this)
   }
 
   getData = async () => {
@@ -14,17 +16,23 @@ export default class Index extends React.Component {
       .then((res) => res.json())
       .then(json => {this.setState({items: json})})
       .catch(err => {console.log(`error: ${err}`)})
-  };
+  }
+
+  changeView(isGrid) {
+    console.log(`click: ${isGrid}`)
+    this.setState({isGrid: isGrid})
+  }
 
   componentDidMount() {
     this.getData()
   }
 
   render() {
+    let { isGrid, items } = this.state
     return (
       <div>
-        <Nav />
-        <Content items={this.state.items} />
+        <Nav isGrid={isGrid} changeView={this.changeView}/>
+        <Content items={items} isGrid={isGrid}/>
         <style jsx>{`
           :global(body) {
             margin: 0;

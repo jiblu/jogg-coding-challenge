@@ -3,9 +3,9 @@ import ListView from './listView'
 
 // conditionally render gridview vs listview to content
 
-const Content = () => (
+const Content = props => (
   <div>
-    Content here
+    Content here {props.isGrid.toString()}
   </div>
 )
 
