@@ -6,5 +6,16 @@ export default function Index() {
 
   getData();
 
-  return <div>Start building your app 🤟</div>;
+  return (
+    <div>
+      Testing
+      <style jsx>{`
+        :global(body) {
+          margin: 0;
+          font-family: -apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif;
+        }
+      `}
+      </style>
+    </div>
+  )
 }
