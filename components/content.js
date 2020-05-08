@@ -1,12 +1,12 @@
 import GridView from './gridView'
 import ListView from './listView'
-
+import { Page } from '../styles/component'
 // conditionally render gridview vs listview to content
 
 const Content = props => (
-  <div>
+  <Page>
     Content here {props.isGrid.toString()}
-  </div>
+  </Page>
 )
 
 export default Content
