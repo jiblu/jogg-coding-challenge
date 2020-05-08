@@ -1,6 +1,6 @@
-const GridCard = () => (
+const GridCard = props => (
   <div>
-    GridCard here
+    {JSON.stringify(props.item)}
   </div>
 )
 

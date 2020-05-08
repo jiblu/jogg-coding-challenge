@@ -1,6 +1,10 @@
-const GridView = () => (
+import GridCard from './gridCard'
+
+const GridView = props => (
   <div>
-    GridView here
+    {props.items.map(item => {
+      return <GridCard item={item} key={item.id} />
+    })}
   </div>
 )
 
