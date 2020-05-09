@@ -3,12 +3,10 @@ import { Metrics } from '../styles'
 import GridCard from './gridCard'
 
 const GridViewStyle = styled.div`
-  width: 80%;
-  margin: auto;
   display: grid;
-  padding: 2px;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: ${Metrics.gridGap};
+  grid-row-gap: ${Metrics.gridRowGap}
 `
 
 const GridView = props => (

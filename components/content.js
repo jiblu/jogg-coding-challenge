@@ -4,7 +4,8 @@ import GridView from './gridView'
 import ListView from './listView'
 
 const Page = styled.div`
-    padding: 0px ${Metrics.pagePadding}
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr
 `
 const Content = props => {
   let view = props.isGrid ?
@@ -12,7 +13,9 @@ const Content = props => {
     <ListView items={props.items} />
   return (
     <Page>
+      <div> </div>
       {view}
+      <div> </div>
     </Page>
   )
 }
