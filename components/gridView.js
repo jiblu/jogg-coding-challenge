@@ -1,13 +1,8 @@
 import styled from 'styled-components'
 import { Metrics } from '../styles'
+import { GridViewStyle } from '../styles/componentStyles'
 import GridCard from './gridCard'
 
-const GridViewStyle = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: ${Metrics.gridGap};
-  grid-row-gap: ${Metrics.gridRowGap}
-`
 
 const GridView = props => (
   <GridViewStyle>

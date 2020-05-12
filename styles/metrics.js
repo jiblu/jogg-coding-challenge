@@ -1,13 +1,24 @@
 const Metrics = {
   iconWidth: '20px',
   iconHeight: '20px',
-  pagePadding: '8px',
-  gridGap: '15px',
-  gridRowGap: '35px',
-  imageWidth: '300px',
   imageHeight: '200px',
-  cardWidth: '300px',
-  cardHeight: '300px'
+  maxWidthContent: '900px',
+  sizes: {
+    xxxsmall: '5px',
+    xxsmall: '15px',
+    xsmall: '20px',
+    small: '35px',
+    medium: '300px',
+  },
+  deviceSize: {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px'
+  }
 }
 
 export default Metrics

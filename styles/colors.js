@@ -3,7 +3,8 @@ const Colors = {
   gray: '#59595B',
   redViolet: '#C5327B',
   persianGreen: '#0EA0A0',
-  cinnabar: '#EA4A26'
+  cinnabar: '#EA4A26',
+  white: '#FFFFFF'
 }
 
 export default Colors

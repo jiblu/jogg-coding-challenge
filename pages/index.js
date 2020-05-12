@@ -1,11 +1,15 @@
+import styled from 'styled-components'
+import { Colors } from '../styles'
+import { IndexStyle } from '../styles/componentStyles'
 import Content from '../components/content'
 import Nav from '../components/nav'
+
 
 export default class Index extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isGrid: true,
+      isGrid: false,
       items: []
     }
     this.changeView = this.changeView.bind(this)
@@ -30,17 +34,18 @@ export default class Index extends React.Component {
   render() {
     let { isGrid, items } = this.state
     return (
-      <div>
+      <IndexStyle>
         <Nav isGrid={isGrid} changeView={this.changeView}/>
         <Content items={items} isGrid={isGrid}/>
         <style jsx>{`
           :global(body) {
             margin: 0;
             font-family: -apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif;
+            background: ${Colors.background};
           }
         `}
         </style>
-      </div>
+      </IndexStyle>
     )
   }
 }
