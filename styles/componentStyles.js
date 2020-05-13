@@ -37,7 +37,9 @@ export const IconsStyle = styled.div`
   justify-content: center;
   align-items: center;
 `
-
+export const IconStyle = styled.div`
+  margin: 0 0 0 10px
+`
 export const ContentStyle = styled.div`
   background: ${Colors.white};
   padding: ${Metrics.sizes.xxxsmall};
