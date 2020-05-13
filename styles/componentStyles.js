@@ -1,10 +1,15 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import { Metrics, Colors } from './index'
 
 export const IndexStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center
+`
+export const NavTitleStyle = styled.div`
+  font-size: 25px;
+  font-weight: bold;
+  color: ${Colors.gray}
 `
 
 export const NavStyle = styled.div`
@@ -64,12 +69,27 @@ export const ImageStyle = styled.img`
 `
 export const ListViewStyle = styled.div`
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  margin: 0px 0px 25px 25px
+`
+export const ListLabelRowStyle = styled.div`
+  display: flex;
+  margin: 5px;
+`
+export const ListLabelStyle = styled.div`
+  margin: 10px 5px 0 5px;
+  color: ${Colors.gray};
+  ${props => props.width && css`
+    width: ${props.width}
+  `};
+  font-size: 12px;
+  font-weight: bold
 `
 export const ListCardStyle = styled.div`
   display: flex;
-  margin: 5px;
-  height: 50px
+  margin: 10px 5px;
+  height: 50px;
+  align-items: center
 `
 
 export const ListImage = styled.img`
@@ -79,10 +99,15 @@ export const ListImage = styled.img`
 
 export const ListTitle = styled.div`
   margin: 0 5px;
-  width: 100%
+  width: 100%;
+  color: ${Colors.persianGreen};
+  font-size: 12px;
+  font-weight: bold
 `
 
 export const ListText = styled.div`
   margin: 0 5px;
   width: 300px;
+  color: ${Colors.gray};
+    font-size: 12px;
 `

@@ -1,5 +1,6 @@
 import styled, {css} from 'styled-components'
-import { ListViewStyle } from '../styles/componentStyles'
+import { Colors } from '../styles'
+import { ListViewStyle, ListLabelRowStyle, ListLabelStyle } from '../styles/componentStyles'
 import ListCard from './listCard'
 
 const titles = [
@@ -10,17 +11,6 @@ const titles = [
   {title:'DATE CREATED',width: '300px'},
   {title:'OPTIONS',width: '300px'},
 ]
-
-const ListLabelRowStyle = styled.div`
-  display: flex;
-  margin: 5px;
-`
-const ListLabelStyle = styled.div`
-  margin: 0 5px;
-  ${props => props.width && css`
-    width: ${props.width}
-  `};
-`
 
 const ListView = props => (
   <ListViewStyle>
