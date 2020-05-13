@@ -1,13 +1,17 @@
 {
+  "homepage":"jiblu.github.io/jogg-coding-challenge",
   "name": "api-routes",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
+    "gh-pages": "^2.2.0",
     "next": "latest",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
