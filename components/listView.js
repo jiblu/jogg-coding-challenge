@@ -1,12 +1,14 @@
+import { ListViewStyle } from '../styles/componentStyles'
 import ListCard from './listCard'
 
+
 const ListView = props => (
-  <div>
-    {/* {props.items.map(item => {
+  <ListViewStyle>
+    {props.items.map(item => {
       return <ListCard item={item} key={item.id} />
-    })} */}
+    })}
     
-  </div>
+  </ListViewStyle>
 )
 
 export default ListView
