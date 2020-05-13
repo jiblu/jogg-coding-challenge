@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ListCardStyle, ListImage, ListTitle, ListText } from '../styles/componentStyles'
+import { ListCardStyle, ListImage, ListTitle, ListText, Dot } from '../styles/componentStyles'
 import { getFormattedDate } from '../utils/date'
 
 const titles = [
@@ -13,15 +13,16 @@ const titles = [
 
 const ListCard = props => {
   let { image, title, replies, status, date  } = props.item
+  let repliesText =  replies > 1 ? replies + ' replies' : replies + ' reply'
   title = title.toUpperCase()
-  replies =  replies > 1 ? replies + ' replies' : replies + ' reply'
   status = status[0].toUpperCase() + status.slice(1)
   date = getFormattedDate(date)
+  let dot = replies > 0 ? <Dot hasReplies /> : <Dot />
   return (
     <ListCardStyle>
-        <ListImage src={image} width='100px' height='50px' />
+        <ListImage src={image} height='50px'/>
         <ListTitle>{title}</ListTitle>
-        <ListText>{replies}</ListText>
+        <ListText>{dot} {repliesText}</ListText>
         <ListText>{status}</ListText>
         <ListText>{date}</ListText>
         <ListText> ... </ListText>

@@ -104,6 +104,7 @@ export const ListCardStyle = styled.div`
 export const ListImage = styled.img`
   margin: 0 5px;
   width: 82px;
+  height: 50px;
 `
 
 export const ListTitle = styled.div`
@@ -120,3 +121,18 @@ export const ListText = styled.div`
   color: ${Colors.gray};
     font-size: 12px;
 `
+export const Dot = styled.div`
+  width: 0px;
+  height: 0px;
+  background-color: ${Colors.cinnabar};
+  border-radius: 50%;
+  display: inline-block;
+  ${props => props.hasReplies && css`
+    width: 7px;
+    height: 7px;
+  `};
+  `
+  // ${props => props.replies && css`
+  //   width: ${props.replies === 0 ? '0px' : '10px'}
+  //   height: ${props.replies === 0 ? '0px' : '10px'}
+  // `};

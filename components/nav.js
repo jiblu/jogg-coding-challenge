@@ -6,7 +6,6 @@ import GridIconActive from '../svgs/grid-view-active.svg'
 import ListIcon from '../svgs/list-view.svg'
 import ListIconActive from '../svgs/list-view-active.svg'
 
-
 const Nav = props => {
 let gridIcon = props.isGrid ? 
   <GridIconActive onClick={() => props.changeView(true)} width={Metrics.sizes.xsmall} height={Metrics.sizes.xsmall}/> :
