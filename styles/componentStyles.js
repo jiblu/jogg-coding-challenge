@@ -71,3 +71,18 @@ export const ListCardStyle = styled.div`
   margin: 5px;
   height: 50px
 `
+
+export const ListImage = styled.img`
+  margin: 0 5px;
+  width: 82px;
+`
+
+export const ListTitle = styled.div`
+  margin: 0 5px;
+  width: 100%
+`
+
+export const ListText = styled.div`
+  margin: 0 5px;
+  width: 300px;
+`
