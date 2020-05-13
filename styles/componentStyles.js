@@ -41,8 +41,15 @@ export const IconsStyle = styled.div`
 export const ContentStyle = styled.div`
   background: ${Colors.white};
   padding: ${Metrics.sizes.xxxsmall};
-  width: calc(${Metrics.sizes.medium} * 3 + ${Metrics.sizes.xsmall} * 2 + 40px)
+  max-width: 970px;
+  @media (max-width: 1000px) { 
+    width: 660px
+  }
+  @media (max-width: 670px) {
+    width: 340px
+  }
 `
+  // width: calc(${Metrics.sizes.medium} * 3 + ${Metrics.sizes.xsmall} * 2 + 40px)
 export const GridViewStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -79,11 +86,11 @@ export const ListLabelRowStyle = styled.div`
 export const ListLabelStyle = styled.div`
   margin: 10px 5px 0 5px;
   color: ${Colors.gray};
+  font-size: 12px;
+  font-weight: bold;
   ${props => props.width && css`
     width: ${props.width}
   `};
-  font-size: 12px;
-  font-weight: bold
 `
 export const ListCardStyle = styled.div`
   display: flex;

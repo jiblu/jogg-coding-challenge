@@ -15,9 +15,9 @@ const titles = [
 const ListView = props => (
   <ListViewStyle>
     <ListLabelRowStyle>
-      {titles.map(t => {
+      {titles.map((t, i) => {
         let { title, width } = t
-        return <ListLabelStyle width={width}>{title}</ListLabelStyle>
+        return <ListLabelStyle key={i} width={width}>{title}</ListLabelStyle>
       })}
     </ListLabelRowStyle>
     {props.items.map(item => {

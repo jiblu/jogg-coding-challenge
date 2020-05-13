@@ -1,3 +1,5 @@
+// const { innerWidth: width, innerHeight: height } = window
+
 const Metrics = {
   iconWidth: '20px',
   iconHeight: '20px',
@@ -18,7 +20,9 @@ const Metrics = {
     laptop: '1024px',
     laptopL: '1440px',
     desktop: '2560px'
-  }
+  },
+  // screenWidth: width < height ? width : height,
+  // screenHeight: width < height ? height : width,
 }
 
 export default Metrics
